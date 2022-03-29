@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
 
-    'base.apps.BaseConfig'
+    'base.apps.BaseConfig',
+    'home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [
@@ -84,11 +85,8 @@ WSGI_APPLICATION = 'ERP_Edu.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'erp',
-        'USER': getenv('USER'),
-        'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
